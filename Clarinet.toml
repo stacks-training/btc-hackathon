@@ -1,0 +1,25 @@
+[project]
+name = 'hackathon-cusco'
+description = ''
+authors = []
+telemetry = true
+cache_dir = './.cache'
+
+[contracts.voting]
+path = 'contracts/voting.clar'
+clarity_version = 2
+epoch = 2.5
+
+[contracts.distribute]
+path = 'contracts/distribute.clar'
+clarity_version = 2
+epoch = 2.5
+
+[repl.analysis]
+passes = ['check_checker']
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
